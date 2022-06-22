@@ -15,3 +15,12 @@ Since StatCast does not provide home plate umpire data, we need to obtain that d
 Here home plate umpire information for the 2021 season was taken from Retrosheet and combined with all pitch data from 2021.
 
 Once we have a CSV with StatCast pitch data along with the plate umpire information it is a simple matter of training a MLP to learn the strike zone and output the decision boundary overlaid with the "true" strike zone. We can further filter the data before visualization for example by handedness, matchup, etc.
+
+### Sample Output
+Below is a plot of all balls and strikes called by Angel Hernandez over the 2021 MLB season.
+
+![Sample output](https://github.com/crobertz/strikezonevisual/blob/main/out/Angel_Hernandez.png)
+
+An MLP is trained on the strikes and balls data and the decision boundary plotted along with an overlay for the true strike zone.
+The horizontal width of the true zone is the width of home plate which is 17 inches.
+The top and bottom vertical positions of the true zone are given by taking the average of all `sz_top` and `sz_bot` values in the StatCast csv file respectively.
