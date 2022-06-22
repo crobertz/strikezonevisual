@@ -12,7 +12,7 @@ if __name__ == '__main__':
     """
 
     # load df from merged csv at specified path
-    CSV_NAME = 'merged.csv'
+    CSV_NAME = 'statcast_with_umpires.csv'
     CSV_PATH = Path(__file__).parent / CSV_NAME
     df_base = pd.read_csv(CSV_PATH)
 
